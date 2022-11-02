@@ -28,4 +28,11 @@ jobs:
         distribution: 'temurin'
         cache: maven
     - name: Build with Maven
-      run: mvn -B package --file ./my-app/pom.xml
+      run: 
+        mvn -B package --file ./my-app/pom.xml
+        mkdir staging && cp target/*.jar staging
+    - name: Workflow to artifacts
+      uses: action/upload-artifact@v2
+      with:
+        name: github-actions-artifact
+        path: staging
