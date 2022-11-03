@@ -38,9 +38,6 @@ jobs:
       with:
         name: github-actions-artifact
         path: staging
-        
-    - uses: actions/checkout@v2
-    - name: Build the Docker image
-      run: docker build ./my-app --file Dockerfile --tag my-image-name:$(date +%s)
+   
        
      
