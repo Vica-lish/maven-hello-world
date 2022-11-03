@@ -32,6 +32,7 @@ jobs:
       run: |
         mvn -B package --file ./my-app/pom.xml
         mkdir staging && cp /home/runner/work/maven-hello-world/maven-hello-world/my-app/target/*.jar staging
+        tree
         
     - name: Workflow to artifacts
       uses: actions/upload-artifact@v2
