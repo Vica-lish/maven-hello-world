@@ -39,7 +39,7 @@ jobs:
           cd my-app
           git config --global user.name "vica.lish"
           git config --global user.email "vicalish@gmail.com"
-          git add -A
+          git add ./my-app/pom.xml
           git commit -m "Update pom.xml"
           git push
         
