@@ -30,8 +30,8 @@ jobs:
         
     - name: Build with Maven
       run: |
-        mvn validate -DbumpPatch
         mvn -B package --file ./my-app/pom.xml
+        mvn validate -DbumpPatch
         mkdir staging && cp /home/runner/work/maven-hello-world/maven-hello-world/my-app/target/*.jar staging
         tree
         
