@@ -33,7 +33,15 @@ jobs:
         mvn -B package --file ./my-app/pom.xml
         mvn validate --file ./my-app/pom.xml -DbumpPatch
         mkdir staging && cp /home/runner/work/maven-hello-world/maven-hello-world/my-app/target/*.jar staging
-        tree
+    
+    - name: update file and push to remote
+      run: |
+          cd my-app
+          git config --global user.name "doron.amsalem"
+          git config --global user.email "100doron100@gmail.com"
+          git add -A
+          git commit -m "Update pom.xml"
+          git push
         
     - name: Workflow to artifacts
       uses: actions/upload-artifact@v2
