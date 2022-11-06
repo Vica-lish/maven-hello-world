@@ -62,7 +62,3 @@ jobs:
         file: ./Dockerfile
         push: true
         tags: vicalish/github-proj:latest
-
-    
-       
-     
