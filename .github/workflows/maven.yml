@@ -32,6 +32,7 @@ jobs:
       run: |
         mvn -B package --file ./my-app/pom.xml
         mvn validate --file ./my-app/pom.xml -DbumpPatch
+        tree
     
     - name: update file and push to remote
       run: |
