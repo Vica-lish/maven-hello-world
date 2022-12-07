@@ -14,6 +14,6 @@ phases:
       - mvn -f my-app/pom.xml package
 artifacts:
   files:
-    - target/my-app-1.0-SNAPSHOT.jar
+    - target/m*
     - appspec.yml
   discard-paths: yes
