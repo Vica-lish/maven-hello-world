@@ -7,11 +7,11 @@ phases:
   build:
     commands:
       - echo Build started on `date`
-      - mvn test 
+      - mvn -f maven-hello-world/my-app/pom.xml test 
   post_build:
     commands:
       - echo Build completed on `date`
-      - mvn package
+      - mvn -f maven-hello-world/my-app/pom.xml package
 artifacts:
   files:
     - target/my-app-1.0-SNAPSHOT.jar
